@@ -22,4 +22,12 @@ protected:
 	DECLARE_MESSAGE_MAP()
 public:
 	afx_msg void OnEnChangeEdit2();
+private:
+	CString m_user;
+	CString m_pwd;
+public:
+	afx_msg void OnBnClickedButton1();
+	afx_msg void OnClose();
+	virtual void OnOK();
+	virtual BOOL OnInitDialog();
 };
