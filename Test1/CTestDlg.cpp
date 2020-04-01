@@ -60,6 +60,11 @@ void CTestDlg::OnBnClickedButton1()
 	//单击确认,登陆窗口
 	UpdateData(TRUE);
 
+	//获取到正确值
+	CInfoFile file;
+	CString name, pwd;
+	file.ReadLogin(name, pwd);
+	
 	if (m_user.IsEmpty()||m_pwd.IsEmpty())
 	{	
 		MessageBoxW(TEXT("登陆名和密码不能为空"));

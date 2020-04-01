@@ -7,6 +7,7 @@
 #include "Test1.h"
 
 #include "MainFrm.h"
+#include "InfoFile.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -64,7 +65,15 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 
 	SetTitle(TEXT("SaleSystem"));
 
-
+	//TEST
+	CInfoFile file;
+	CString name;
+	CString pwd;
+	CString show;show.Format(TEXT("Show"));
+	file.ReadLogin(name, pwd);
+	MessageBox(name);
+	MessageBox(pwd);
+	MessageBox(show);
 
 	return 0;
 }

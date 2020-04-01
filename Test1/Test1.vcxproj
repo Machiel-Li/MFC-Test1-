@@ -213,6 +213,7 @@
     <ResourceCompile Include="Test1.rc" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="login.ini" />
     <None Include="res\Test1.rc2" />
   </ItemGroup>
   <ItemGroup>
@@ -220,6 +221,9 @@
     <Image Include="res\Test1.ico" />
     <Image Include="res\Test1Doc.ico" />
     <Image Include="res\user.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="stock.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
