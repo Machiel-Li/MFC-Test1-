@@ -19,6 +19,7 @@ IMPLEMENT_DYNCREATE(CMainFrame, CFrameWnd)
 
 BEGIN_MESSAGE_MAP(CMainFrame, CFrameWnd)
 	ON_WM_CREATE()
+	ON_COMMAND(ID_APP_EXIT, &CMainFrame::OnAppExit)
 END_MESSAGE_MAP()
 
 static UINT indicators[] =
@@ -105,3 +106,10 @@ void CMainFrame::Dump(CDumpContext& dc) const
 
 // CMainFrame 消息处理程序
 
+
+
+void CMainFrame::OnAppExit()
+{
+	// TODO: 在此添加命令处理程序代码
+	exit(0);
+}

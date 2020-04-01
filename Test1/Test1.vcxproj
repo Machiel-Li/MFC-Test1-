@@ -184,6 +184,8 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="CDispalyView.h" />
+    <ClInclude Include="CSelectView.h" />
     <ClInclude Include="CTestDlg.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="InfoFile.h" />
@@ -196,6 +198,7 @@
     <ClInclude Include="Test1View.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CSelectView.cpp" />
     <ClCompile Include="CTestDlg.cpp" />
     <ClCompile Include="InfoFile.cpp" />
     <ClCompile Include="MainFrm.cpp" />

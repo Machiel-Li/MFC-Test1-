@@ -36,6 +36,7 @@ BEGIN_MESSAGE_MAP(CTestDlg, CDialogEx)
 	ON_EN_CHANGE(IDC_EDIT2, &CTestDlg::OnEnChangeEdit2)
 	ON_BN_CLICKED(IDC_BUTTON1, &CTestDlg::OnBnClickedButton1)
 	ON_WM_CLOSE()
+	ON_BN_CLICKED(IDC_BUTTON2, &CTestDlg::OnBnClickedButton2)
 END_MESSAGE_MAP()
 
 
@@ -58,7 +59,7 @@ void CTestDlg::OnBnClickedButton1()
 	// TODO: 在此添加控件通知处理程序代码
 
 	//单击确认,登陆窗口
-	UpdateData(TRUE);
+	UpdateData(TRUE);//每次点击之后把框架中输入的值写到内存控件中，由外到内
 
 	//获取到正确值
 	CInfoFile file;
@@ -117,8 +118,21 @@ BOOL CTestDlg::OnInitDialog()
 	CDialogEx::OnInitDialog();
 
 	// TODO:  在此添加额外的初始化
-
+	CInfoFile file;
+	CString name, pwd;
+	file.ReadLogin(name, pwd);
+	m_user = name;
+	m_pwd = pwd;
+	UpdateData(FALSE);//从内同步到外显示
 
 	return TRUE;  // return TRUE unless you set the focus to a control
 				  // 异常: OCX 属性页应返回 FALSE
+}
+
+
+
+void CTestDlg::OnBnClickedButton2()
+{
+	// TODO: 在此添加控件通知处理程序代码
+	exit(0);
 }

@@ -30,4 +30,5 @@ public:
 	afx_msg void OnClose();
 	virtual void OnOK();
 	virtual BOOL OnInitDialog();
+	afx_msg void OnBnClickedButton2();
 };
