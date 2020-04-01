@@ -66,14 +66,14 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	SetTitle(TEXT("SaleSystem"));
 
 	//TEST
-	CInfoFile file;
+	/*CInfoFile file;
 	CString name;
 	CString pwd;
 	CString show;show.Format(TEXT("Show"));
 	file.ReadLogin(name, pwd);
 	MessageBox(name);
 	MessageBox(pwd);
-	MessageBox(show);
+	MessageBox(show);*/
 
 	return 0;
 }
